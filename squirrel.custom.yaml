@@ -1,0 +1,15 @@
+patch:
+  style/font_point: 14
+  style/horizontal: true 
+  style/color_scheme: mojave_dark
+  style/corner_radius: 6
+
+  app_options:
+    net.kovidgoyal.kitty:
+      ascii_mode: true
+      vim_mode: true
+    md.obsidian:
+      vim_mode: true
+    com.microsoft.edgemac:
+      inline: true
+

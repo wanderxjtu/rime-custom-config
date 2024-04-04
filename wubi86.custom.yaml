@@ -1,0 +1,19 @@
+patch:
+  switches/+:
+  - name: simplification
+    states: [ 汉字, 漢字 ]
+    reset: 0
+  - name: emoji_suggestion 
+    states: [ 🈚, 🈶 ]
+    reset: 1
+  engine/filters:
+  - simplifier@emoji_suggestion
+  - simplifier
+  - uniquifier
+  simplifier:
+    opencc_config: s2t.json
+  emoji_suggestion:
+    opencc_config: emoji.json
+    option_name: emoji_suggestion
+    tips: none
+    inherit_comment: false
